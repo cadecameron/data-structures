@@ -1,7 +1,24 @@
 class Queue {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
   constructor() {
+    this.storage = {};
+  }
+
+  enqueue(value) {
+    if (Object.keys(this.storage).length === 0) {
+      this.storage[0] = value;
+    } else {
+      this.storage[Math.max(...Object.keys(this.storage)) + 1] = value;
+    }
+  }
+
+  dequeue() {
+    var currentFirst = this.storage[Math.min(...Object.keys(this.storage))];
+    delete this.storage[Math.min(...Object.keys(this.storage))];
+    return currentFirst;
+  }
+
+  size() {
+    return Object.keys(this.storage).length;
   }
 
 }
