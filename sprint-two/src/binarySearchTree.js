@@ -1,8 +1,9 @@
 var BinarySearchTree = function (value) {
-  var obj = {};
-  obj.left;
-  obj.right;
-  obj.value = value;
+  var obj = {
+    left: undefined,
+    right: undefined,
+    value
+  };
 
   obj.insert = function (inputValue) {
     if (obj.value > inputValue) {
@@ -22,13 +23,9 @@ var BinarySearchTree = function (value) {
 
   obj.contains = function (inputValue) {
     var found = false;
-    //console.log("Currently checking for ", inputValue)
-
-
     var searchTree = function (tree) {
       if (tree.value === inputValue) {
         found = true;
-        //console.log('Found true value!');
         return;
       } else {
         if ((inputValue < tree.value) && (tree.left !== undefined)) {
@@ -44,17 +41,14 @@ var BinarySearchTree = function (value) {
 
   obj.depthFirstLog = function (cb) {
     cb(obj.value);
-
     if (obj.left) {
       obj.left.depthFirstLog(cb);
     }
     if (obj.right) {
       obj.right.depthFirstLog(cb);
     }
-
   };
   return obj;
-
 };
 
 /*

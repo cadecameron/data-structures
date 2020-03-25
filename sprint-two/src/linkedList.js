@@ -1,3 +1,12 @@
+var Node = function(value) {
+  var node = {};
+
+  node.value = value;
+  node.next = null;
+
+  return node;
+};
+
 var LinkedList = function() {
   var list = {};
   list.head = null;
@@ -20,7 +29,6 @@ var LinkedList = function() {
       list.head = list.head.next;
       return container.value;
     }
-
   };
 
   list.contains = function(target) {
@@ -34,17 +42,7 @@ var LinkedList = function() {
     }
     return false;
   };
-
   return list;
-};
-
-var Node = function(value) {
-  var node = {};
-
-  node.value = value;
-  node.next = null;
-
-  return node;
 };
 
 /*

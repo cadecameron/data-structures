@@ -1,5 +1,3 @@
-
-
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
@@ -30,7 +28,6 @@ HashTable.prototype.retrieve = function(k) {
       return this._storage.get(index)[i][1];
     }
   }
-
   return undefined;
 };
 
@@ -39,10 +36,6 @@ HashTable.prototype.remove = function(k) {
   this._storage.set(index, undefined)
 };
 
-
-
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-
