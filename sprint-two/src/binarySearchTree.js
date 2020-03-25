@@ -28,7 +28,7 @@ var BinarySearchTree = function (value) {
     var searchTree = function (tree) {
       if (tree.value === inputValue) {
         found = true;
-        console.log("Found true value!");
+        //console.log('Found true value!');
         return;
       } else {
         if ((inputValue < tree.value) && (tree.left !== undefined)) {
@@ -37,7 +37,7 @@ var BinarySearchTree = function (value) {
           searchTree(tree.right);
         }
       }
-    }
+    };
     searchTree(this);
     return found;
   };
@@ -46,16 +46,16 @@ var BinarySearchTree = function (value) {
     cb(obj.value);
 
     if (obj.left) {
-      obj.left.depthFirstLog(cb)
+      obj.left.depthFirstLog(cb);
     }
     if (obj.right) {
-      obj.right.depthFirstLog(cb)
+      obj.right.depthFirstLog(cb);
     }
 
   };
   return obj;
 
-}
+};
 
 /*
  * Complexity: What is the time complexity of the above functions?
