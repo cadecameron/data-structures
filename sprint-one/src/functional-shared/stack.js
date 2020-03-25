@@ -30,4 +30,3 @@ var extend = function(ob1, ob2) {
     ob1[key] = ob2[key];
   }
 };
-
